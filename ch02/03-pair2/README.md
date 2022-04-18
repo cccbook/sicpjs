@@ -11,7 +11,7 @@ head(tail(z))= 3
 這是如何運作的呢？
 
 
-```
+```js
 function pair(x, y) {
     return m => m(x, y);
 }
