@@ -5,4 +5,7 @@
     * https://github.com/source-academy/sicp
 
 
+## 參考
 
+* [JavaScript Functional Programming 指南](https://jigsawye.gitbooks.io/mostly-adequate-guide/)
+* [Pointfree Javascript](https://lucasmreis.github.io/blog/pointfree-javascript/)
