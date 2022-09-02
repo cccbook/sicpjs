@@ -12,3 +12,11 @@ export function pair(x, y) {
 export function head(z) { return z(0); }
 
 export function tail(z) { return z(1); }
+
+export function is_pair(z) {
+    try {
+        return head(z)!=null && tail(z)!=null
+    } catch (err) {
+        return false
+    }
+}

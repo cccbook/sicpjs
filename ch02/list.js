@@ -46,3 +46,27 @@ export function foreach(fun, items) {
     ? fun(null)
     : pair(fun(head(items)), foreach(fun, tail(items)));
 }
+
+export function filter(predicate, sequence) {
+    return is_null(sequence)
+    ? null
+    : predicate(head(sequence))
+    ? pair(head(sequence),
+    filter(predicate, tail(sequence)))
+    : filter(predicate, tail(sequence));
+}
+
+export function accumulate(op, initial, sequence) {
+    return is_null(sequence)
+    ? initial
+    : op(head(sequence),
+    accumulate(op, initial, tail(sequence)));
+}
+
+function member(item, x) {
+    return is_null(x)
+    ? null
+    : item === head(x)
+    ? x
+    : member(item, tail(x));
+}
